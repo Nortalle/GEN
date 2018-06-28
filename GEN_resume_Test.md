@@ -1,9 +1,10 @@
-**Mandatée par le client X, notre société de développement doit se déterminer quand au cycle de vie à mettre en oeuvre dans le cadre du projet à réaliser. Ce projet ne présente pas de risque particulier. Nous avons réalisé avec succès un projet très similaire il y a deux années en arrière. Que choisirons-nous ?**
+**Mandatée par le client X, notre société de développement doit se déterminer quand au cycle de vie à mettre en oeuvre dans le cadre du projet à réaliser. **
 
-- Cycle de vie classique
-- ~~Cycle de vie en V~~
-- ~~Cycle de vie en spirale~~
-- ~~Cycle de vie itératif~~
+- **Ce projet ne présente pas de risque particulier. Nous avons réalisé avec succès un projet très similaire il y a deux années en arrière. Que choisirons-nous ?**
+  - (Cycle de vie classique)
+  - Cycle de vie en V
+  - ~~Cycle de vie en spirale~~
+  - ~~Cycle de vie itératif~~
 
 **La lecture d'un modèle de domaine donne un certain nombre d'indications explicites sur la manière de concevoir l'architecture du logiciel. Notamment, des indications portées habituellement sur un modèle de domaine, on peut déduire**:
 
@@ -282,8 +283,10 @@ C'est-à-dire que la validation correspond à une soluton que l'on peut déploye
 **Acteurs et cas d'utilisation : Parmi les assertions suivantes, cochez celles qui reflètent correctement le concept d'acteur.**
 
 - Un acteur est obligatoirement extérieur au système à développer.
+- L'héritage entre acteurs implique un héritage des droits.
 - ~~En général, pour chaque personne physique agissant sur le système on trouvera un acteur correspondant dans le diagramme de cas d'utilisation.~~
 - ~~Un acteur externe est situé dans un endroit géographiquement éloigné du système à développer~~
+- ~~Un rôle peut être associé à plusieurs personnes physique, mais la même personne physique sera associée à un rôle au maximum~~
 
 **Acteurs et cas d'utilisation : En supposant que la spécification des cas d'utilisation d'un logiciel mette en en évidence l'existence de deux types d'acteurs A et B.** 
 
@@ -306,4 +309,28 @@ C'est-à-dire que la validation correspond à une soluton que l'on peut déploye
 | Réalisation d'un module                    |                |             |      O       |            |
 | Génération d'un sous-ensemble d'exàcutable |                |             |      O       |            |
 | Livraison finale                           |                |             |              |     O      |
+
+**Quel est le principal interêt du cycle de vie itératif ?**
+
+Il permet une gestion des risques efficace car le client a très vite une première version a tester/valider afin de continuer correctement.
+
+**Threads Java : Vrai ou faux ?**
+
+- Deux threads Java peuvent se partager des instructions
+- Deux threads Java de la même application peuvent d'exécuter en vrai parallélisme
+- Un thread Java corrompu peut corrompre l'éxécution des autres threads
+- ~~La machine virtuelle de Java est responsable de l'ordonnancement des threads et notamment du time-slicing.~~
+- ~~Le système d'exploitation alloue une zone mémoire pour chacun des threads de l'application Java~~
+
+**La méthode UP s'appuie sur quel type de programmation ? et sur quelle notations ?**
+
+- Orienté Objet
+- UML
+
+**Donnez-moi au moins 4 exemples de threads lancés automatiquement lorsqu'on lance un programme Java**
+
+- idle : thread inactif
+- main : thread principal du programme lancé
+- (vm : thread machine virtuelle java sur système hôtel)
+- GC : garbage collector
 
