@@ -21,6 +21,31 @@
 - Tests de recette et tests unitaires doivent être dans leur ensemble exécutés de manière automatique.
 - Avec XP, seul le développeur est habilité à estimer le temps de réalisation d'un scénario
 
+**Cas d’utilisation et acteurs  . Cocher les assertions qui sont vraies.** 
+
+- Un cas d’utilisation peut recevoir des informations d’un acteur principal 
+
+- Un cas d’utilisation peut recevoir des informations d’un acteur secondaire 
+- Un cas d’utilisation peut recevoir des informations d’un acteur secondaire 
+- ~~Un cas d’utilisation peut recevoir des informations d’un acteur externe~~
+- Un cas d’utilisation peut fournir des informations à un acteur principal 
+- ~~Un cas d’utilisation peut fournir des informations à un acteur secondaire~~
+- Un cas d’utilisation peut fournir des informations à un acteur externe 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 **Parmi les acteurs participant à un développement XP, dites quel est l'acteur principal qui accomplit chacune des activités énoncées ci-dessous:**
 
 | Activités                                                 | Acteur principal    |
@@ -48,6 +73,19 @@ Oui, car lors de la réalisation des itérations, ce sont ces tests qui sont tes
 - Oui, car la vélocité représente la charge de travail réalisable pour une équipe donnée, ainsi si cette équipe change, elle change aussi.
 - Oui, la vélocité définit la charge de travail accomplissable par une équipe définie - elle change donc si cette équipe change
 - Oui, la vélocité étant la capacité d'une équipe donnée pour la réalisation d'une itération. C'est une métrique propre à l'équipe considérée.
+
+**Les méthodes agiles connaissent une grande dans les entreprises. A l’origine de ce succès,  un certain nombre de constats. Cochez les assertions qui reflètent correctement ces constats.**
+
+- Qu’au sein d’une même entreprise, il ne peut y avoir de méthode de développement unique. C’est aux équipes de se forger une méthode qui leur soit propre. 
+- ~~Que le cycle de vie itératif incrémental (concept repris par UP) ne donne pas satisfaction.~~ 
+- ~~Que les membres de l’équipe doivent faire preuve de courage en s’impliquant dans une nouvelle itération sans pour cela que le code sur lequel ils s’appuient ait été testé de manière approfondie.~~
+- ~~Qu’il est nécessaire d’obtenir un cahier des charges entièrement spécifié au terme de la phase d’analyse.~~
+
+
+
+
+
+
 
 **Méthodes Agiles : Que signifie "Le processus de développement doit être adaptatifs" ?**
 
@@ -83,6 +121,28 @@ Oui, car lors de la réalisation des itérations, ce sont ces tests qui sont tes
 
 Cela signifie que le but principal est que le programme passe les tests qui ont été définis pour cette itération.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 **Méthodes agiles : Parmi les assertions suivantes, cochez celles qui reflètent correctement la notion méthode agile.**
 
 - La planification des itérations est un processus évolutif.
@@ -106,6 +166,20 @@ Cela signifie que le but principal est que le programme passe les tests qui ont 
 | Coûts faibles              | Coût énorme              |
 | Développé par une personne | Développement par équipe |
 | Rarement documenté         | Parfaitement documenté   |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 **MVC**
 
@@ -134,14 +208,12 @@ class Vue2 implements Observer {
 		System.out.println ((Modele)obs.getVal(););
 	}
 }
-
 class Vue1 extends Vue2 {
 	private Modele m2, m1;
 	public Vue2(Modele m1, Modele m2) {
         this.m1=m1;
         this.m2=m2;
 	}
-	
 	public void changeVal (int val) {
         m2.setVal(val);
         m1.setVal(val);
@@ -233,7 +305,7 @@ class Counter implements Observer {
         
     changedValueEventObservers.addObserver(view);
         
-    if (nextCounter != null)
+    if (nextCounter  = null)
     	maxValueReachedEventObservers.addObserver(nextCounter);
     }
     public void go() {
@@ -267,12 +339,20 @@ class Counter implements Observer {
 }
 ```
 
+
+
+
+
+
+
 **La crise du logiciel des années 70 a eu pour conséquence - dans le courant des deux ou trois années qui ont suivi ce constat - d'opérer une remise en question du processus de développement logiciel et des outils utilisés. Notamment :**
 
 - ~~L'arrêt de la programmation procédurale au profit d'une programmation orientée objet.~~
 - ~~La promotion d'un cycle de vie de type itératif~~
 - ~~La réduction systématique de la taille des équipes de développement~~
 - La promotion de la phase d'analyse des besoins
+
+****
 
 **Quelles sont les différences entre le Cycle de Vie en Spirale (CSV) et le Modèle Itératif Incrémental (MII) ?**
 
@@ -304,11 +384,7 @@ C'est-à-dire que la validation correspond à une soluton que l'on peut déploye
 - ~~Pouvoir limiter à une seule vue la mise en oeuvre de l'interfaçage~~
 - ~~Développer le contrôleur indépendamment des vues~~
 
-**Qualité d'un logiciel. Citez:**
-
-- Trois critères de qualité
-
-**Quelque chose :**
+**Critère de qualité d'un logiciel :**
 
 | Critère de qualité                   | Externe | Interne | Processus de développement |
 | ------------------------------------ | :-----: | :-----: | :------------------------: |
@@ -353,7 +429,7 @@ C'est-à-dire que la validation correspond à une soluton que l'on peut déploye
 - Valider : répond aux besoins du client (le **quoi**) - *The right things*
 - Vérifier : fait les choses correctement (le **comment**) - *The thing right*
 
-**Méthode UP : Indique par un rond dans quelle phase l'intensité de chaque discipline/activité est maximum (choix exclusif !)**
+**Méthode UP : Indique par un rond dans quelle phase l'intensité de chaque discipline/activité est maximum (choix exclusif  )**
 
 | Discipline/activité                        | Initialisation | Elaboration | Construction | Transition |
 | ------------------------------------------ | :------------: | :---------: | :----------: | :--------: |
@@ -377,6 +453,10 @@ C'est-à-dire que la validation correspond à une soluton que l'on peut déploye
 
 - Il permet une gestion des risques efficace car le client a très vite une première version a tester/valider afin de continuer correctement.
 - Le client a accès a un exécutable à chaque itération -> il peut valider au fur et à mesure le projet meilleur gestion des risques. 
+
+
+
+
 
 **Threads Java : Vrai ou faux ?**
 
@@ -416,7 +496,17 @@ C'est-à-dire que la validation correspond à une soluton que l'on peut déploye
 - Combien d'histoires peuvent-ils espérer terminer dans le courant d'un sprint ? **20**
 - Que vaut le facteur de focalisation de l'équipe ? **100%**
 
+
+
+
+
+
+
+
+
+
+
 **Vous avez été embauché pour créer le document des exigences d'un nouveau système - le système QUEST - de définition, d'impression et de récolte de QCM papiers, relié au système de gestion des étudiants d'un institut de formation ( qui recueille les résultats) et à la base de données en questions.**
 
-![Acteurs](./Acteurs.PNG)
+![](./Acteurs.PNG)
 
