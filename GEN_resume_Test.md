@@ -237,4 +237,61 @@ class Counter implements Observer {
 
 **Dans une méthode de type UP, à quel moment et dans quelle phase doit-on prendre en compte ce que l'on appelle la "gestion des risques" ?**
 
-On doit prendre en compte la gestion des risques dans la phase de l'élaboration, c'est à dire lorsqu'on va définir nos itérations qui à la fin de chacune permet d'avoir un résultat testé et exécutable. ==> Dans la phase d'initialisation on va également décider si on veut poursuivre le projet ou non, dé
+On doit prendre en compte la gestion des risques dans la phase de l'élaboration, c'est à dire lorsqu'on va définir nos itérations qui à la fin de chacune permet d'avoir un résultat testé et exécutable. ==> Dans la phase d'initialisation on va également décider si on veut poursuivre le projet ou non, décision qui peut être prise en fonction des risques.
+
+**Donner au moins deux raisons qui ont fait que le modèle du Cycle de Vie en spirale a été abandonné au profit de vie incrémental et itératif.**
+
+- On a un résultat que tardivement dans le projet, pas de solution testée et excécutable rapidement pour le modèle Cycle de vie en spirale.
+- Incrémental itératif permet une meilleure gestion des risques grâce aux courtes itérations.
+
+**Dans le cycle en V, du point de vue des tests, on distinguait "vérification" et "validation". Du point de vue de la qualité du logiciel, s'agissait-il dans la phase de validation de tester si le logiciel avaait été fait "correctement" ou de tester si le logiciel était "correct" ?**
+
+C'est-à-dire que la validation correspond à une soluton que l'on peut déployer et qui permet de vérifier que les attentes du client sont respectées.
+
+**Citez au moins 3 avantages à utiliser le design pattern MVC**
+
+- Séparation entre la vue, le modèle et le contrôleur => notion de structure plus simple que d'avoir tout dans le même fichier.
+- Le modèle peut être utilisé par plusieurs programme différents. => Réutilisabilité
+- On peut modifier la vue(interface graphique) sans avoir à toucher le reste(modèle et contrôleur).
+
+| Critère de qualité     | Externe | Interne | Processus |
+| ---------------------- | :-----: | :-----: | :-------: |
+| Fiabilité              |    O    |         |           |
+| Ergonomie              |    O    |         |           |
+| Correction             |    O    |         |           |
+| Robustesse             |    O    |         |           |
+| Performances           |    O    |         |           |
+| Réparabilité           |         |    O    |           |
+| Portabilité            |         |    O    |           |
+| Interopérabilité       |         |    O    |           |
+| Réutilisation          |         |    O    |           |
+| Evolutivité            |         |    O    |           |
+| Maintenabilité         |         |    O    |           |
+| Échange d'informations |         |         |     O     |
+| Respect des délais     |         |         |     O     |
+| Productivité           |         |         |     O     |
+
+**Dans le cadre des "cas d'utilisation", et plus spécifiquement de la relation "extends", cocher les assertions qui sont vraies.**
+
+- ~~La relation "extends" permet de modéliser une variante au cas de base étendu.~~
+- ~~La relation "extends" permet de compléter un cas d'utilisation de base dont la rédaction à été bloqué, en lui rajoutant une fonctionnalité considérée comme obligatoire.~~
+- La relation "extends" permet de modéliser des activités asynchrones, pouvant interrompre le cas de base étendu.
+- La relation "extends" permet d'étendre un cas d'utilisation de base, d'où le sens de la flèche.
+- ~~La rédaction du cas de base doit se référer aux différentes extensions qu'il possède.~~
+
+**Acteurs et cas d'utilisation : Parmi les assertions suivantes, cochez celles qui reflètent correctement le concept d'acteur.**
+
+- Un acteur est obligatoirement extérieur au système à développer.
+- ~~En général, pour chaque personne physique agissant sur le système on trouvera un acteur correspondant dans le diagramme de cas d'utilisation.~~
+- ~~Un acteur externe est situé dans un endroit géographiquement éloigné du système à développer~~
+
+**Acteurs et cas d'utilisation : En supposant que la spécification des cas d'utilisation d'un logiciel mette en en évidence l'existence de deux types d'acteurs A et B.** 
+
+- Le programme utilisé par A sera différent de celui utilisé par B
+- Si A "hérite de" B, cela signifie que A dispose au moins des mêmes droits que B vis-à-vis de l'utilisation du logiciel.
+
+**Les gens du Génie Logiciel sont parfois tordus. Ils opèrent une distinction assez nette entre le fait de "vérifier" le logiciel et le fait de le "valider". Qu'est-ce que cela signifie ?**
+
+- Valider : répond aux besoins du client (le **quoi**) - *The right things*
+- Vérifier : fait les choses correctement (le **comment**) - *The thing right*
+
