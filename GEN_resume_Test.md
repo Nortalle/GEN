@@ -31,16 +31,43 @@
 | Spécification du plan d'itération                         | Client              |
 | Détermination de la charge de développement d'un scénario | Développeur         |
 
-**Méthodes XP : citez trois avantages de travailler en binôme**:
+**Méthode XP : quand on écrit la spécification d'un logiciel, doit-on penser aux tests fonctionnels ?**
+
+Oui, car lors de la réalisation des itérations, ce sont ces tests qui sont testés et lorsqu'a la fin les résultats des tests sont positifs(**COMME LE SIDA**) cela permettra de savoir qu'on a réussi l'itération
+
+**Méthode XP : citez trois avantages de travailler en binôme**:
 
 - Formation : un nouveau peut travailler avec un plus expérimenté
 - Contrôle mutuel au fur-et-à-mesure
 - Meilleure collaboration/Stratégie d'équipe(tournus réguliers)
 - Personne n'est "indispensable" au projet
+- Moins d'erreurs de code
+
+**Méthode XP : Si l'équipe change(départs, nouveaux engagements), doit-on revoir la vélocité?**
+
+- Oui, car la vélocité représente la charge de travail réalisable pour une équipe donnée, ainsi si cette équipe change, elle change aussi.
+- Oui, la vélocité définit la charge de travail accomplissable par une équipe définie - elle change donc si cette équipe change
+- Oui, la vélocité étant la capacité d'une équipe donnée pour la réalisation d'une itération. C'est une métrique propre à l'équipe considérée.
 
 **Méthodes Agiles : Que signifie "Le processus de développement doit être adaptatifs" ?**
 
-Que le processus doit être capable de s'adapter à des changements de besoins du clients, ou de changements dans l'équipe, sans compromettre le projet
+- Que le processus doit être capable de s'adapter à des changements de besoins du clients, ou de changements dans l'équipe, sans compromettre le projet
+- Il s'agit de pouvoir adapter la méthode de travail pour gagner en efficacité.
+- ~~adapter le développement aux différents changements~~
+
+**Méthodes XP : le refactoring d'un fragment de code intervient à quel moment ?**
+
+- Dès lors que le fragment de code donne statisfaction(du point de vue de ses résultats)
+
+- Dès lors que le fragment de code est soupçonné d'un délit de YAGNI 
+
+  [YAGNI]: https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it	"YAGNI"
+
+- ~~Avant la spécification des tests fonctionnels correspondants~~
+
+- ~~Dès lors que le client souhaite une amélioration de la conception du fragment de code~~
+
+- ~~Dès lors que le client change d'avis vis à vis d'une fonctionnalité pour laquelle le fragment de code joue un certain rôle~~
 
 **Méthodes XP et UP : Cochez les propositions qui vous paraissent vraies :**
 
@@ -57,8 +84,16 @@ Cela signifie que le but principal est que le programme passe les tests qui ont 
 
 - La planification des itérations est un processus évolutif.
 - L'observation de la vélocité d'une équipe de développement peut entraîner une révision de la planification des itérations.
+- Contrairement à UP, les méthodes agiles préconisent de développer l'architecture centrale du logiciel non pas au début du développement mais au fur et à mesure des besoins.
+- ~~On désire en premier lieu pouvoir s'adapter aux chagements concernant les besoins des utilisateurs. En revanche, le processus même de la méthode agile(étapes, gestion, outils,..) est clairement spécifié.~~
+- ~~On désire obtenir un cahier des charges entièrement spécifié au terme de la phase d'analyse.~~
 - ~~Contrairement à UP, les méthodes agiles préconisent un développement itératif incrémental.~~
 - ~~Les méthodes agiles souhaitent que l'équipe soit constituée de programmeurs "séniors", (avec expérience), des programmeurs suffisamment "agiles", susceptibles d'écrire directement leur code de manière propre et définitive.~~
+
+**Méthodes XP : D'après vous, les tests fonctionnels sont spécifés :**
+
+- Au début de l'itération concernée
+  - Au début *de chaque itération*(soulignée dans la correction). On peut ainsi écrire les tests unitaires que l'on exécutera régulièrement tout au long de la réalisation de l'itération. À la fin de l'itération, le succès des tests confirme la bonne implémentation (Commentaires : On en fait/spécifie aussi au tout début du développement. une fois les cas d'utilisation/use case déterminés)
 
 **Problématique**
 
@@ -255,22 +290,28 @@ C'est-à-dire que la validation correspond à une soluton que l'on peut déploye
 - Le modèle peut être utilisé par plusieurs programme différents. => Réutilisabilité
 - On peut modifier la vue(interface graphique) sans avoir à toucher le reste(modèle et contrôleur).
 
-| Critère de qualité     | Externe | Interne | Processus |
-| ---------------------- | :-----: | :-----: | :-------: |
-| Fiabilité              |    O    |         |           |
-| Ergonomie              |    O    |         |           |
-| Correction             |    O    |         |           |
-| Robustesse             |    O    |         |           |
-| Performances           |    O    |         |           |
-| Réparabilité           |         |    O    |           |
-| Portabilité            |         |    O    |           |
-| Interopérabilité       |         |    O    |           |
-| Réutilisation          |         |    O    |           |
-| Evolutivité            |         |    O    |           |
-| Maintenabilité         |         |    O    |           |
-| Échange d'informations |         |         |     O     |
-| Respect des délais     |         |         |     O     |
-| Productivité           |         |         |     O     |
+**Qualité d'un logiciel. Citez:**
+
+- Trois critères de qualité
+
+**Quelque chose :**
+
+| Critère de qualité                   | Externe | Interne | Processus de développement |
+| ------------------------------------ | :-----: | :-----: | :------------------------: |
+| Fiabilité                            |    O    |         |                            |
+| Ergonomie                            |    O    |         |                            |
+| Correction                           |    O    |         |                            |
+| Robustesse                           |    O    |         |                            |
+| Performances                         |    O    |         |                            |
+| Réparabilité                         |         |    O    |                            |
+| Portabilité                          |         |    O    |                            |
+| Interopérabilité                     |         |    O    |                            |
+| Evolutivité                          |         |    O    |                            |
+| Maintenabilité                       |         |    O    |                            |
+| Réutilisation                        |         |    O    |                            |
+| Échange d'informations/Communication |         |         |             O              |
+| Productivité                         |         |         |             O              |
+| Respect des délais                   |         |         |             O              |
 
 **Dans le cadre des "cas d'utilisation", et plus spécifiquement de la relation "extends", cocher les assertions qui sont vraies.**
 
@@ -304,19 +345,29 @@ C'est-à-dire que la validation correspond à une soluton que l'on peut déploye
 | ------------------------------------------ | :------------: | :---------: | :----------: | :--------: |
 | Étude de faisabilité                       |       O        |             |              |            |
 | Réalisation de l'architecture centrale     |                |      O      |              |            |
+| Modélisation de domaine                    |                |      O      |              |            |
 | Rédaction des cas d'utilisation            |                |      O      |              |            |
 | Planification des itérations               |                |      O      |              |            |
 | Réalisation d'un module                    |                |             |      O       |            |
 | Génération d'un sous-ensemble d'exàcutable |                |             |      O       |            |
 | Livraison finale                           |                |             |              |     O      |
 
+**Méthode UP : Lesquelles de ces assertions sont correctes ?**
+
+- Il arrive que les itérations de UP soient de durée différente.
+- UP prend en compte la gestion des risques
+- ~~La méthode de gestion du prosessus UP s'applique à une modélisation procédurale et/ou objet.~~
+- ~~La planification globale du projet ainsi que l'estimation réaliste des coûts est réalisée dans la phase d'initialisation.~~
+
 **Quel est le principal interêt du cycle de vie itératif ?**
 
-Il permet une gestion des risques efficace car le client a très vite une première version a tester/valider afin de continuer correctement.
+- Il permet une gestion des risques efficace car le client a très vite une première version a tester/valider afin de continuer correctement.
+- Le client a accès a un exécutable à chaque itération -> il peut valider au fur et à mesure le projet meilleur gestion des risques. 
 
 **Threads Java : Vrai ou faux ?**
 
 - Deux threads Java peuvent se partager des instructions
+- Deux threads Java peuvent se partager les même variables
 - Deux threads Java de la même application peuvent d'exécuter en vrai parallélisme
 - Un thread Java corrompu peut corrompre l'éxécution des autres threads
 - ~~La machine virtuelle de Java est responsable de l'ordonnancement des threads et notamment du time-slicing.~~
@@ -333,4 +384,25 @@ Il permet une gestion des risques efficace car le client a très vite une premi�
 - main : thread principal du programme lancé
 - (vm : thread machine virtuelle java sur système hôtel)
 - GC : garbage collector
+
+**Historiquement, la "gestion des risques" a été introduite dans le modèle du cycle de vie dit " en spirale". Que signifie "gestion des risques" ? **
+
+- Donner la priorité aux éléments présentant un certain risque
+- ~~Prendre le risque de développer un système pour lequel le groupe n'a aucune expérience de développement~~
+- ~~PRendre le risque de développer un fragment de code avant que l'analyse ne soit spécifiée globalement et de manière détaillé pour tout le système~~
+
+**Cycle de vie en V : Voici quelques problème le caractérisant, lesquels sont corrects ? **
+
+- Le développement est trop linéaire et le feedback de la phase d'implémentation est tardif.
+- ~~Du point de vue des tests, Vérification et Validation ne couvrent que la phase d'implémentation.~~
+- ~~N'autorise qu'une décomposition fonctionnelle et ne permet pas une modélisation orientée objet.~~
+
+**Sachant qu'un point d'histoire correspond à un jour idéal de travail/homme. Une équipe Scrum de 4 personnes travaille avec des sprints de 2 semaines, sa vélocité a la valeur 40. tous les membres de l'équipe travaillent à 100%, à raison de 5 jours par semaine. Toutes les histoires que l'équipe a planifiées sont toutes estimées à 2 point d'histoire.**
+
+- Combien d'histoires peuvent-ils espérer terminer dans le courant d'un sprint ? **20**
+- Que vaut le facteur de focalisation de l'équipe ? **100%**
+
+**Vous avez été embauché pour créer le document des exigences d'un nouveau système - le système QUEST - de définition, d'impression et de récolte de QCM papiers, relié au système de gestion des étudiants d'un institut de formation ( qui recueille les résultats) et à la base de données en questions.**
+
+![Acteurs](./Acteurs.PNG)
 
