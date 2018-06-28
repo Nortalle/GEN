@@ -72,6 +72,9 @@ Oui, car lors de la réalisation des itérations, ce sont ces tests qui sont tes
 **Méthodes XP et UP : Cochez les propositions qui vous paraissent vraies :**
 
 - XP comme UP sont deux méthodes "conduites par les cas d'utilisation".
+- Avec XP, contrairement à UP, les classes de la couche modèle(et donc naturellement les tables correspondantes de la base de données) seront développées au fur et à mesure des itérations plutôt qu'en une fois au début du développement.
+- Le code de test et le code applicatif ne sont pas écrits dans le même ordre selon que l'on travaille selon XP ou selon UP.
+- ~~Avec XP, contrairement à UP, les scénarios(user-stories) sont écrits au fur et à mesure des itérations plutôt qu'en une fois au début du dévelppement.~~
 - ~~Avec XP, contrairement à UP, les scénarios(user stories) sont écrits au fur et à mesure des itérations plutôt qu'en une fois, avant de commencer le développement.~~
 - ~~Au fil des itérations, modules par modules, XP comme UP complètent le code présenté au client en s'appuyant sur une architecture centrale élaborée dans l'une des première phase du développement.~~
 - ~~Avec XP comme UP, il est préconisé d'écrire l'ensemble des classes métier(modèle de domaine) avant de commencer les itérations à proprement parler.~~
@@ -271,14 +274,23 @@ class Counter implements Observer {
 - ~~La réduction systématique de la taille des équipes de développement~~
 - La promotion de la phase d'analyse des besoins
 
+**Quelles sont les différences entre le Cycle de Vie en Spirale (CSV) et le Modèle Itératif Incrémental (MII) ?**
+
+- Les incréments de MII sont plus petits que ceux du CVS
+- Avec le CVS, le client n'a pas l'opportunitl de tester le produit avant qu'il ne soit réalisé entièrement, contrairement au MII.
+- ~~Les incréments donnent lieu dans les deux cas à un produit exécutable~~
+
 **Dans une méthode de type UP, à quel moment et dans quelle phase doit-on prendre en compte ce que l'on appelle la "gestion des risques" ?**
 
-On doit prendre en compte la gestion des risques dans la phase de l'élaboration, c'est à dire lorsqu'on va définir nos itérations qui à la fin de chacune permet d'avoir un résultat testé et exécutable. ==> Dans la phase d'initialisation on va également décider si on veut poursuivre le projet ou non, décision qui peut être prise en fonction des risques.
+- On doit prendre en compte la gestion des risques dans la phase de l'élaboration, c'est à dire lorsqu'on va définir nos itérations qui à la fin de chacune permet d'avoir un résultat testé et exécutable. ==> Dans la phase d'initialisation on va également décider si on veut poursuivre le projet ou non, décision qui peut être prise en fonction des risques.
+- Lorsqu'une fonctionnalité présente un gros risque, elle est testée pour vérifier qu'elle soit réalisable. Si elle n'est pas réalisable => client est avertie le plus vite possible (Commentaires : OK, mais un peu vague quand même porter plutôt de priorité donnée aux éléments à risques)
 
 **Donner au moins deux raisons qui ont fait que le modèle du Cycle de Vie en spirale a été abandonné au profit de vie incrémental et itératif.**
 
 - On a un résultat que tardivement dans le projet, pas de solution testée et excécutable rapidement pour le modèle Cycle de vie en spirale.
 - Incrémental itératif permet une meilleure gestion des risques grâce aux courtes itérations.
+
+
 
 **Dans le cycle en V, du point de vue des tests, on distinguait "vérification" et "validation". Du point de vue de la qualité du logiciel, s'agissait-il dans la phase de validation de tester si le logiciel avaait été fait "correctement" ou de tester si le logiciel était "correct" ?**
 
@@ -289,6 +301,8 @@ C'est-à-dire que la validation correspond à une soluton que l'on peut déploye
 - Séparation entre la vue, le modèle et le contrôleur => notion de structure plus simple que d'avoir tout dans le même fichier.
 - Le modèle peut être utilisé par plusieurs programme différents. => Réutilisabilité
 - On peut modifier la vue(interface graphique) sans avoir à toucher le reste(modèle et contrôleur).
+- ~~Pouvoir limiter à une seule vue la mise en oeuvre de l'interfaçage~~
+- ~~Développer le contrôleur indépendamment des vues~~
 
 **Qualité d'un logiciel. Citez:**
 
@@ -345,8 +359,8 @@ C'est-à-dire que la validation correspond à une soluton que l'on peut déploye
 | ------------------------------------------ | :------------: | :---------: | :----------: | :--------: |
 | Étude de faisabilité                       |       O        |             |              |            |
 | Réalisation de l'architecture centrale     |                |      O      |              |            |
-| Modélisation de domaine                    |                |      O      |              |            |
-| Rédaction des cas d'utilisation            |                |      O      |              |            |
+| Modélisation de domaine                    |      (O)       |      O      |              |            |
+| Rédaction des cas d'utilisation            |      (O)       |      O      |     (O)      |            |
 | Planification des itérations               |                |      O      |              |            |
 | Réalisation d'un module                    |                |             |      O       |            |
 | Génération d'un sous-ensemble d'exàcutable |                |             |      O       |            |
