@@ -25,7 +25,7 @@
 | Activités                                                 | Acteur principal    |
 | --------------------------------------------------------- | ------------------- |
 | Rédaction des scénarios                                   | Client              |
-| Spécification des tests unitaires                         | testeur/Développeur |
+| Spécification des tests unitaires                         | Testeur/Développeur |
 | Spécification des tests fonctionnels                      | Client              |
 | Spécification du plan d'itération                         | Client              |
 | Détermination de la charge de développement d'un scénario | Développeur         |
@@ -294,4 +294,16 @@ C'est-à-dire que la validation correspond à une soluton que l'on peut déploye
 
 - Valider : répond aux besoins du client (le **quoi**) - *The right things*
 - Vérifier : fait les choses correctement (le **comment**) - *The thing right*
+
+**Méthode UP : Indique par un rond dans quelle phase l'intensité de chaque discipline/activité est maximum (choix exclusif !)**
+
+| Discipline/activité                        | Initialisation | Elaboration | Construction | Transition |
+| ------------------------------------------ | :------------: | :---------: | :----------: | :--------: |
+| Étude de faisabilité                       |       O        |             |              |            |
+| Réalisation de l'architecture centrale     |                |      O      |              |            |
+| Rédaction des cas d'utilisation            |                |      O      |              |            |
+| Planification des itérations               |                |      O      |              |            |
+| Réalisation d'un module                    |                |             |      O       |            |
+| Génération d'un sous-ensemble d'exàcutable |                |             |      O       |            |
+| Livraison finale                           |                |             |              |     O      |
 
